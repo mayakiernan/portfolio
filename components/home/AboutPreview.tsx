@@ -3,12 +3,12 @@ import HandDrawnUnderline from "@/components/shared/HandDrawnUnderline";
 
 export default function AboutPreview() {
   return (
-    <section className="border-b border-black/10 px-6 py-16 md:px-10 md:py-24">
+    <section className="border-b border-black px-6 py-16 md:px-10 md:py-24">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
         <div className="relative">
           <div className="absolute -left-3 top-8 z-10 hidden h-[72%] w-10 bg-[#1a2744] md:block">
-            <p className="font-marker rotate-180 px-2 py-4 text-[11px] leading-tight tracking-[0.08em] text-white [writing-mode:vertical-rl]">
-              ABOUT
+            <p className="rotate-180 px-2 py-4 text-[10px] font-normal uppercase leading-tight tracking-[0.24em] text-white [writing-mode:vertical-rl]">
+              About
             </p>
           </div>
 
@@ -25,7 +25,7 @@ export default function AboutPreview() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <div className="space-y-5 font-display text-base leading-snug text-black md:text-[17px] md:leading-snug">
+          <div className="space-y-4 text-[13px] font-normal leading-[1.45] text-black md:text-[14px]">
             <p>
               Currently studying{" "}
               <a

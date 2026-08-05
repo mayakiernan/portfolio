@@ -72,11 +72,7 @@ function ProjectCardContent({
       className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
       style={{ width }}
     >
-      <p className="font-serif text-5xl font-light leading-none tracking-tight text-black md:text-6xl">
-        {project.number}
-      </p>
-
-      <div className="relative mt-3 w-full overflow-hidden bg-stone-100 shadow-[0_16px_36px_-22px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:-translate-y-0.5">
+      <div className="relative w-full overflow-hidden bg-stone-100 shadow-[0_16px_36px_-22px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:-translate-y-0.5">
         <div className={`relative w-full ${gridSizeClasses[project.size]}`}>
           <PlaceholderCover
             color={project.placeholderColor}
@@ -86,10 +82,10 @@ function ProjectCardContent({
         </div>
       </div>
 
-      <h3 className="font-serif mt-4 text-xl font-bold leading-tight text-black md:text-2xl">
-        {project.title}
+      <h3 className="mt-3 text-[15px] font-semibold leading-[1.15] text-black md:text-[16px]">
+        {project.number}. {project.title}
       </h3>
-      <p className="font-display mt-1 text-[10px] font-normal tracking-[0.08em] text-black/45 md:text-[11px]">
+      <p className="mt-2 text-[11px] font-normal leading-none text-black/55">
         {project.year}
       </p>
     </Link>

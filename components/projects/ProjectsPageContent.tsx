@@ -19,12 +19,7 @@ function ProjectGridCard({
       href={project.href}
       className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
     >
-      <p className="font-serif text-3xl font-light leading-none text-black">
-        {project.number}
-      </p>
-      <div
-        className="relative mt-3 w-full overflow-hidden bg-stone-100 aspect-[3/4]"
-      >
+      <div className="relative w-full overflow-hidden bg-stone-100 aspect-[3/4]">
         {project.coverImage ? (
           <Image
             src={project.coverImage}
@@ -40,10 +35,10 @@ function ProjectGridCard({
           />
         )}
       </div>
-      <h3 className="font-serif mt-4 text-lg font-bold leading-tight text-black">
-        {project.title}
+      <h3 className="mt-3 text-[14px] font-semibold leading-[1.15] text-black">
+        {project.number}. {project.title}
       </h3>
-      <p className="font-display mt-1 text-[10px] tracking-[0.08em] text-black/45">
+      <p className="mt-2 text-[11px] font-normal leading-none text-black/55">
         {project.year}
       </p>
     </Link>
@@ -57,7 +52,7 @@ export default function ProjectsPageContent() {
   return (
     <div className="mx-auto grid max-w-7xl gap-12 px-6 py-12 md:grid-cols-[180px_1fr] md:px-10 md:py-16">
       <aside>
-        <p className="font-display mb-6 text-[10px] uppercase tracking-[0.2em] text-black/50">
+        <p className="mb-6 text-[10px] font-normal uppercase tracking-[0.24em] text-black/50">
           Filter
         </p>
         <ul className="space-y-3">
@@ -69,7 +64,7 @@ export default function ProjectsPageContent() {
                 <button
                   type="button"
                   onClick={() => setActiveCategory(category.id)}
-                  className={`font-display text-left text-sm uppercase tracking-[0.12em] transition-colors ${
+                  className={`text-left text-[11px] font-normal uppercase tracking-[0.18em] transition-colors ${
                     isActive
                       ? "bg-black px-3 py-2 text-white"
                       : "px-3 py-2 text-black hover:bg-black/5"
@@ -84,10 +79,10 @@ export default function ProjectsPageContent() {
       </aside>
 
       <div>
-        <h1 className="font-display text-4xl font-medium tracking-[-0.03em] text-black md:text-6xl">
+        <h1 className="text-[11px] font-normal uppercase tracking-[0.24em] text-black">
           Projects
         </h1>
-        <p className="font-serif mt-3 text-base italic text-black/60">
+        <p className="mt-3 text-[11px] font-normal text-black/55">
           ({filteredProjects.length})
         </p>
 

@@ -1,14 +1,14 @@
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-black/10 bg-white px-6 py-16 md:px-10 md:py-20">
+    <footer className="border-t border-black bg-white px-6 py-16 md:px-10 md:py-20">
       <div className="mx-auto max-w-7xl">
         <p className="font-marker text-3xl tracking-[0.06em] text-black md:text-4xl">
           MAYA KIERNAN
         </p>
-        <p className="font-serif mt-3 text-lg italic text-black md:text-xl">
+        <p className="mt-3 text-[13px] font-normal tracking-[0.04em] text-black md:text-[14px]">
           Researcher &amp; Innovator
         </p>
-        <p className="font-display mt-8 text-sm text-black">
+        <p className="mt-8 text-[12px] font-normal text-black">
           <a
             href="https://instagram.com"
             target="_blank"

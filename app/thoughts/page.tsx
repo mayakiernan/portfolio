@@ -13,10 +13,10 @@ export default function ThoughtsPage() {
       <SiteHeader />
       <main className="px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto max-w-3xl">
-          <h1 className="font-marker text-4xl tracking-[0.06em] text-black md:text-5xl">
-            THOUGHTS
+          <h1 className="text-[11px] font-normal uppercase tracking-[0.24em] text-black">
+            Thoughts
           </h1>
-          <p className="font-serif mt-6 text-lg italic text-black/70">
+          <p className="mt-6 text-[13px] font-normal leading-[1.45] text-black/70">
             Writing and notes coming soon.
           </p>
         </div>
