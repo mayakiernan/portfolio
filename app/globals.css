@@ -3,9 +3,25 @@
 @theme inline {
   --font-serif: var(--font-cormorant), "Georgia", serif;
   --font-display: var(--font-montserrat), "Helvetica Neue", "Arial", sans-serif;
+  --font-marker: var(--font-marker), "Permanent Marker", cursive;
 }
 
 body {
   font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
+}
+
+.font-marker {
+  font-family: var(--font-marker);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,15 +1,17 @@
-import SiteNav from "@/components/shared/SiteNav";
-import HeroSection from "@/components/home/HeroSection";
-import ProjectLinks from "@/components/home/ProjectLinks";
+import SiteHeader from "@/components/shared/SiteHeader";
+import AboutPreview from "@/components/home/AboutPreview";
+import FallingProjects from "@/components/home/FallingProjects";
 import SiteFooter from "@/components/shared/SiteFooter";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-950">
-      <SiteNav variant="hero" />
-      <HeroSection />
-      <ProjectLinks />
+    <>
+      <SiteHeader />
+      <main>
+        <AboutPreview />
+        <FallingProjects />
+      </main>
       <SiteFooter />
-    </main>
+    </>
   );
 }
