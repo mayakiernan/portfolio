@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HandDrawnUnderline from "@/components/shared/HandDrawnUnderline";
 
 export default function AboutPreview() {
   return (
@@ -24,25 +25,27 @@ export default function AboutPreview() {
         </div>
 
         <div className="flex flex-col justify-center">
-          <p className="font-marker text-2xl tracking-[0.06em] text-black md:text-3xl">
-            ABOUT
-          </p>
-          <p className="font-display mt-4 text-sm font-medium uppercase tracking-[0.12em] text-black/70">
-            Placeholder introduction
-          </p>
-          <div className="mt-8 space-y-4 font-serif text-base leading-relaxed text-black/80 md:text-lg">
+          <div className="space-y-5 font-display text-base leading-snug text-black md:text-[17px] md:leading-snug">
             <p>
-              This section will introduce my work across research, design, and
-              making. For now, it stands in as a magazine-style layout with room
-              for a portrait and editorial copy.
+              Currently studying{" "}
+              <a
+                href="https://mde.harvard.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-block text-black transition-opacity hover:opacity-70"
+              >
+                Design Engineering
+                <HandDrawnUnderline />
+              </a>{" "}
+              at Harvard. Interested in the things that make us happy, good
+              food, beautiful places, and other people.
             </p>
             <p>
-              The full story lives on the{" "}
-              <a href="/about" className="underline underline-offset-4">
-                About
-              </a>{" "}
-              page — background, process, and the threads that connect my
-              projects.
+              Was and always will be a mixed methods researcher from intimate at
+              home ethnographies to global thousand person surveys worked to
+              understand people and their worlds. I&apos;ve helped brands
+              including Google, Pinterest, Uber, Meta, and Mayo Clinic better
+              understand people and the things that matter to them.
             </p>
           </div>
         </div>
