@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maya Kiernan — Portfolio
 
-## Getting Started
+Next.js portfolio site with an animated hero homepage and project case-study pages.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx` — hero landing with project links
+- `app/onk/page.tsx` — ONK ceramics collection gallery
+- `lib/projects.ts` — project registry (add new projects here)
+- `components/home/` — homepage hero and canvas animation
+- `components/onk/` — ONK gallery and lightbox
+- `components/shared/` — nav, footer, project cards
+- `public/onk/` — web-ready ONK images (WebP + JPG)
 
-## Learn More
+## Adding images
 
-To learn more about Next.js, take a look at the following resources:
+Keep originals on your Mac in `Documents/Portfolio/[ProjectName]/`, then copy optimized assets into `public/` using kebab-case filenames.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To convert PNGs to WebP before committing:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run optimize-images
+```
 
-## Deploy on Vercel
+This runs `scripts/optimize-images.mjs` on everything in `public/onk/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adding a new project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Add assets to `public/[project-slug]/`
+2. Register the project in `lib/projects.ts`
+3. Create `app/[project-slug]/page.tsx` (follow the ONK page pattern)
+
+## Deploy
+
+The site auto-deploys to [Vercel](https://vercel.com) on push to `main` via the GitHub integration.
+
+If the site is not publicly accessible after deploy:
+
+1. Open the Vercel project dashboard → **Settings → Deployment Protection** and disable protection for production (or allow public access).
+2. Under **Settings → Domains**, attach your custom domain (e.g. `mayakiernan.com`) to this project.
+3. Confirm the production URL loads `/` and `/onk`.
+
+Production deployment status is visible on GitHub under **Deployments** for [mayakiernan/portfolio](https://github.com/mayakiernan/portfolio).
