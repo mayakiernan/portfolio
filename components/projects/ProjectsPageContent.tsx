@@ -19,8 +19,11 @@ function ProjectGridCard({
       href={project.href}
       className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
     >
+      <p className="font-serif text-3xl font-light leading-none text-black">
+        {project.number}
+      </p>
       <div
-        className="relative w-full overflow-hidden bg-stone-100 aspect-[3/4]"
+        className="relative mt-3 w-full overflow-hidden bg-stone-100 aspect-[3/4]"
       >
         {project.coverImage ? (
           <Image
@@ -37,8 +40,11 @@ function ProjectGridCard({
           />
         )}
       </div>
-      <p className="font-display mt-3 text-xs font-medium tracking-[0.08em] text-black">
-        {project.label}
+      <h3 className="font-serif mt-4 text-lg font-bold leading-tight text-black">
+        {project.title}
+      </h3>
+      <p className="font-display mt-1 text-[10px] tracking-[0.08em] text-black/45">
+        {project.year}
       </p>
     </Link>
   );

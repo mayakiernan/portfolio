@@ -9,8 +9,9 @@ export type ProjectSize = "sm" | "md" | "lg" | "tall" | "wide";
 
 export type Project = {
   slug: string;
-  label: string;
+  number: string;
   title: string;
+  year: string;
   subtitle: string;
   category: Exclude<ProjectCategory, "all">;
   coverImage?: string;
@@ -33,8 +34,9 @@ export const projectCategories: {
 export const projects: Project[] = [
   {
     slug: "rewild",
-    label: "01. Re:Wild",
+    number: "01",
     title: "Re:Wild",
+    year: "2025",
     subtitle: "Conservation research platform",
     category: "research",
     placeholderColor: "#1a3d2e",
@@ -43,8 +45,9 @@ export const projects: Project[] = [
   },
   {
     slug: "onk",
-    label: "02. ONK Collection",
+    number: "02",
     title: "The ONK Collection",
+    year: "2024",
     subtitle: "Fall 2024 — Ceramics",
     category: "ceramics",
     coverImage: "/onk/main-image.jpg",
@@ -54,8 +57,9 @@ export const projects: Project[] = [
   },
   {
     slug: "preterm",
-    label: "03. Preterm",
+    number: "03",
     title: "Preterm",
+    year: "2024",
     subtitle: "Clinical data visualization",
     category: "research",
     placeholderColor: "#2b2f4a",
@@ -64,8 +68,9 @@ export const projects: Project[] = [
   },
   {
     slug: "mobile-survey",
-    label: "04. Survey Recaps",
+    number: "04",
     title: "Mobile Survey Recaps",
+    year: "2024",
     subtitle: "Field research tooling",
     category: "software",
     placeholderColor: "#4a3728",
@@ -74,8 +79,9 @@ export const projects: Project[] = [
   },
   {
     slug: "soy-data",
-    label: "05. Soy Data",
+    number: "05",
     title: "Soy Data",
+    year: "2023",
     subtitle: "Agricultural analytics",
     category: "research",
     placeholderColor: "#5c4a1f",
@@ -84,8 +90,9 @@ export const projects: Project[] = [
   },
   {
     slug: "studio-notes",
-    label: "06. Studio Notes",
+    number: "06",
     title: "Studio Notes",
+    year: "2023",
     subtitle: "Design explorations",
     category: "design",
     placeholderColor: "#3d3d3d",
