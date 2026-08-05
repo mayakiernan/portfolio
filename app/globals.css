@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-cormorant), "Georgia", serif;
+  --font-display: var(--font-montserrat), "Helvetica Neue", "Arial", sans-serif;
+}
+
+body {
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+}
