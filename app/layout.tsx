@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter, Permanent_Marker } from "next/font/google";
+import { Cormorant_Garamond, Montserrat, Permanent_Marker } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const permanentMarker = Permanent_Marker({
@@ -42,9 +42,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${permanentMarker.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${montserrat.variable} ${permanentMarker.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white font-sans text-black">{children}</body>
+      <body className="min-h-full bg-white text-black">{children}</body>
     </html>
   );
 }

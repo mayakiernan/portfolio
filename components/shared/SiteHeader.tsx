@@ -5,24 +5,21 @@ import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/navigation";
 import HandDrawnUnderline from "@/components/shared/HandDrawnUnderline";
 
-const navLinkClass =
-  "relative text-[11px] font-normal uppercase tracking-[0.24em] text-black transition-opacity hover:opacity-50 md:text-[12px]";
-
 export default function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-y border-black bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+    <header className="sticky top-0 z-50 border-b border-black/10 bg-white">
+      <div className="mx-auto flex max-w-7xl items-center gap-8 px-6 py-5 md:gap-14 md:px-10">
         <Link
           href="/"
           aria-label="Home"
-          className={`${navLinkClass} shrink-0 opacity-100`}
+          className="font-marker shrink-0 text-2xl leading-none tracking-[0.08em] text-black md:text-3xl"
         >
           MK
         </Link>
 
-        <nav className="flex items-center gap-6 md:gap-10">
+        <nav className="flex items-center gap-5 md:gap-8">
           {navItems.map((item) => {
             const isActive =
               pathname === item.href ||
@@ -32,7 +29,9 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`${navLinkClass} ${isActive ? "opacity-100" : "opacity-60"}`}
+                className={`relative font-display text-[11px] font-normal uppercase tracking-[0.22em] text-black transition-opacity hover:opacity-50 md:text-xs ${
+                  isActive ? "opacity-100" : "opacity-70"
+                }`}
               >
                 {item.label}
                 {isActive && <HandDrawnUnderline />}

@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter), "Helvetica Neue", "Arial", sans-serif;
-  --font-display: var(--font-inter), "Helvetica Neue", "Arial", sans-serif;
   --font-serif: var(--font-cormorant), "Georgia", serif;
+  --font-display: var(--font-montserrat), "Helvetica Neue", "Arial", sans-serif;
   --font-marker: var(--font-marker), "Permanent Marker", cursive;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .font-marker {

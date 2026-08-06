@@ -19,11 +19,11 @@ export default function AboutPage() {
             <h1 className="font-marker text-5xl leading-none tracking-[0.06em] text-black md:text-7xl">
               Maya Kiernan
             </h1>
-            <p className="mt-6 text-[13px] font-normal tracking-[0.04em] text-black md:text-[14px]">
+            <p className="font-serif mt-6 text-xl italic text-black md:text-2xl">
               Researcher &amp; Innovator
             </p>
 
-            <div className="mt-10 space-y-4 text-[13px] font-normal leading-[1.45] text-black/80 md:text-[14px]">
+            <div className="mt-10 space-y-5 font-serif text-base leading-relaxed text-black/80 md:text-lg">
               <p>
                 This page is a placeholder for a fuller biography, process notes,
                 and the ideas behind my work across research, design, ceramics, and
